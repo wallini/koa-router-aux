@@ -1,0 +1,29 @@
+{
+  "name": "koa-router-aux",
+  "version": "1.0.0",
+  "description": "An koa-router auxiliary tool.setting up the route by decorator.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "\"echo koa-route-aux\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitamin-e/koa-route-aux.git"
+  },
+  "keywords": [
+    "koa2",
+    "router",
+    "koa-router",
+    "typescript",
+    "decorator"
+  ],
+  "author": "vitamin-e",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vitamin-e/koa-route-aux/issues"
+  },
+  "homepage": "https://github.com/vitamin-e/koa-route-aux#readme",
+  "devDependencies": {
+    "@types/koa-router": "^7.0.27"
+  }
+}

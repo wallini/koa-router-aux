@@ -1,3 +1,8 @@
+// Type definitions for koa-router-aux v1.0.2
+// Project: https://github.com/vitamin-e/koa-router-aux/
+// Definitions by: vitamin-e <https://github.com/vitamin-e>
+// Definitions: https://github.com/hellopao/DefinitelyTyped
+
 /// <reference types="koa-router" />
 import * as Router from 'koa-router';
 /**
@@ -6,7 +11,7 @@ import * as Router from 'koa-router';
  * @export
  * @class KoaRouterAux
  */
-export declare class KoaRouterAux {
+declare class KoaRouterAux {
     /**
      *
      *
@@ -78,4 +83,7 @@ export declare class KoaRouterAux {
     static put(uri: string): any;
     static del(uri: string): any;
 }
+
 export { KoaRouterAux as route };
+
+

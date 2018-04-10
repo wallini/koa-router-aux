@@ -1,6 +1,8 @@
 # koa-route-aux
 An koa-router auxiliary tool.setting up the route by decorator.
 
+only available for typescript.
+
 ## Example
     import route from 'koa-router-aux';
     const Koa = require('koa');

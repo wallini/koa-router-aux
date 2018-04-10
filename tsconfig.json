@@ -6,11 +6,11 @@
     "lib": [
       "es6"
     ], /* Specify library files to be included in the compilation. */ /* Specify library files to be included in the compilation. */
-    "watch": true,
-    "declaration": false, /* Generates corresponding '.d.ts' file. */
+    "watch": false,
+    "declaration": true, /* Generates corresponding '.d.ts' file. */
     "sourceMap": false, /* Generates corresponding '.map' file. */ /* Concatenate and emit output to single file. */
     "outDir": "dist", /* Redirect output structure to the directory. */
-    "rootDir": "develop", /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "rootDir": "src", /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     "strict": true, /* Enable all strict type-checking options. */
     "noUnusedLocals": true, /* Report errors on unused locals. */
     "moduleResolution": "node", /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
@@ -19,6 +19,7 @@
   },
   "exclude": [
     "node_modules",
-    "out"
+    "koa-router-aux",
+    "dist"
   ]
 }

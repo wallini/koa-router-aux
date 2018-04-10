@@ -1,8 +1,9 @@
 {
   "name": "koa-router-aux",
-  "version": "1.0.2",
-  "description": "An koa-router auxiliary tool.setting up the route by decorator.",
+  "version": "1.0.5",
+  "description": "An koa-router auxiliary tool.setting up the route by decorator. for typescript",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "\"echo koa-route-aux\""
   },

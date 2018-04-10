@@ -150,4 +150,4 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Object)
 ], KoaRouterAux, "del", null);
-exports.route = KoaRouterAux;
+exports.default = KoaRouterAux;

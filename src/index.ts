@@ -134,4 +134,4 @@ class KoaRouterAux {
     }
 }
 
-export { KoaRouterAux as route };
+export default KoaRouterAux;

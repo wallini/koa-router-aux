@@ -1,4 +1,4 @@
-# koa-route-aux
+# koa-router-aux
 An koa-router auxiliary tool.setting up the route by decorator.
 
 only available for typescript.

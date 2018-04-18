@@ -12,8 +12,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 function validate(target, propertyKey, descriptor) {
     let method = descriptor.value;
     descriptor.value = (uri) => {
-        if (!KoaRouterAux.router)
-            throw Error('router is invalid');
+        if (!KoaRouterAux.router) {
+            throw Error("router is invalid");
+        }
         return method(uri);
     };
 }
@@ -32,7 +33,7 @@ class KoaRouterAux {
      * @memberof KoaRouterAux
      */
     static contoller(className, ...args) {
-        let prefix = '';
+        let prefix = "";
         args.forEach((arg) => { prefix += arg; });
         KoaRouterAux.contoller_router_map[className] = prefix;
     }
@@ -71,8 +72,9 @@ class KoaRouterAux {
      * @memberof KoaRouterAux
      */
     static get(uri) {
-        if (!uri)
-            throw Error('uri is invalid');
+        if (!uri) {
+            throw Error("uri is invalid");
+        }
         return (target, propertyKey, descriptor) => {
             let method = descriptor.value;
             KoaRouterAux.router.get(KoaRouterAux.getFullUri(uri, target), method);
@@ -87,8 +89,9 @@ class KoaRouterAux {
      * @memberof KoaRouterAux
      */
     static post(uri) {
-        if (!uri)
-            throw Error('uri is invalid');
+        if (!uri) {
+            throw Error("uri is invalid");
+        }
         return (target, propertyKey, descriptor) => {
             let method = descriptor.value;
             KoaRouterAux.router.post(KoaRouterAux.getFullUri(uri, target), method);
@@ -103,19 +106,80 @@ class KoaRouterAux {
      * @memberof KoaRouterAux
      */
     static put(uri) {
-        if (!uri)
-            throw Error('uri is invalid');
+        if (!uri) {
+            throw Error("uri is invalid");
+        }
         return (target, propertyKey, descriptor) => {
             let method = descriptor.value;
             KoaRouterAux.router.put(KoaRouterAux.getFullUri(uri, target), method);
         };
     }
+    /**
+     *
+     *
+     * @static
+     * @param {string} uri
+     * @returns {*}
+     * @memberof KoaRouterAux
+     */
     static del(uri) {
-        if (!uri)
-            throw Error('uri is invalid');
+        if (!uri) {
+            throw Error("uri is invalid");
+        }
         return (target, propertyKey, descriptor) => {
             let method = descriptor.value;
             KoaRouterAux.router.del(KoaRouterAux.getFullUri(uri, target), method);
+        };
+    }
+    /**
+     *
+     *
+     * @static
+     * @param {string} uri
+     * @returns {*}
+     * @memberof KoaRouterAux
+     */
+    static patch(uri) {
+        if (!uri) {
+            throw Error("uri is invalid");
+        }
+        return (target, propertyKey, descriptor) => {
+            let method = descriptor.value;
+            KoaRouterAux.router.patch(KoaRouterAux.getFullUri(uri, target), method);
+        };
+    }
+    /**
+     *
+     *
+     * @static
+     * @param {string} uri
+     * @returns {*}
+     * @memberof KoaRouterAux
+     */
+    static head(uri) {
+        if (!uri) {
+            throw Error("uri is invalid");
+        }
+        return (target, propertyKey, descriptor) => {
+            let method = descriptor.value;
+            KoaRouterAux.router.head(KoaRouterAux.getFullUri(uri, target), method);
+        };
+    }
+    /**
+     *
+     *
+     * @static
+     * @param {string} uri
+     * @returns {*}
+     * @memberof KoaRouterAux
+     */
+    static options(uri) {
+        if (!uri) {
+            throw Error("uri is invalid");
+        }
+        return (target, propertyKey, descriptor) => {
+            let method = descriptor.value;
+            KoaRouterAux.router.options(KoaRouterAux.getFullUri(uri, target), method);
         };
     }
 }
@@ -150,4 +214,22 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Object)
 ], KoaRouterAux, "del", null);
+__decorate([
+    validate,
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Object)
+], KoaRouterAux, "patch", null);
+__decorate([
+    validate,
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Object)
+], KoaRouterAux, "head", null);
+__decorate([
+    validate,
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Object)
+], KoaRouterAux, "options", null);
 exports.default = KoaRouterAux;

@@ -1,5 +1,5 @@
 /// <reference types="koa-router" />
-import * as Router from 'koa-router';
+import * as Router from "koa-router";
 /**
  *
  *
@@ -76,6 +76,41 @@ declare class KoaRouterAux {
      * @memberof KoaRouterAux
      */
     static put(uri: string): any;
+    /**
+     *
+     *
+     * @static
+     * @param {string} uri
+     * @returns {*}
+     * @memberof KoaRouterAux
+     */
     static del(uri: string): any;
+    /**
+     *
+     *
+     * @static
+     * @param {string} uri
+     * @returns {*}
+     * @memberof KoaRouterAux
+     */
+    static patch(uri: string): any;
+    /**
+     *
+     *
+     * @static
+     * @param {string} uri
+     * @returns {*}
+     * @memberof KoaRouterAux
+     */
+    static head(uri: string): any;
+    /**
+     *
+     *
+     * @static
+     * @param {string} uri
+     * @returns {*}
+     * @memberof KoaRouterAux
+     */
+    static options(uri: string): any;
 }
 export default KoaRouterAux;
